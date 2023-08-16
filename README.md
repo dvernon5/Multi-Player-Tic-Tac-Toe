@@ -15,4 +15,11 @@ This is a simple implementation of the classic Tic Tac Toe game written in C++. 
   ./tic_tac_toe
 ```
 3. **Game Rules**: The game is played on a 3 x 3 grid. Players take turns placing their markers on the grid. The goal is to get three of their markers in a row, either horizontally, vertically, or diagonally, before the opponent does.
-4. Player input: 
+4. **Player input**: Players are prompted to enter the row and column numbers where they want to place their marker. Input is validated to ensure it's within valid range (1 to 3) and the chosen spot is not already occupied.
+5. **Winning and Tying**: The game continues until a player wins or the board is completely filled (a tie). The game will display the winner's name or "TIE" if there's no winner.
+
+## Code Structure
+
+The code is structured as follows:
+
+* `displayGameBoard`: Display the current state of the game board.
