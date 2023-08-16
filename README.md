@@ -9,3 +9,9 @@ This is a simple implementation of the classic Tic Tac Toe game written in C++. 
 ```shell
   g++ -o tic_tac_toe tic_tac_toe.cpp
 ```
+2. Running the Game: After compilation, you can run the game using the following command:
+
+```shell
+  ./tic_tac_toe
+```
+
