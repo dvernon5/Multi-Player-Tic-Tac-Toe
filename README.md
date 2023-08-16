@@ -22,4 +22,10 @@ This is a simple implementation of the classic Tic Tac Toe game written in C++. 
 
 The code is structured as follows:
 
-* `displayGameBoard`: Display the current state of the game board.
+* displayGameBoard: Display the current state of the game board.
+* player: Handles the input from players and places their markers on the board.
+* checkIfWinnerLeftToRightDiagonal: These functions check if there's a winner based on rows, columns, and diagonals.
+* checkIfWinner: Calls the above functions to determine if there's a winner or a tie.
+* inputValidate: Validates user input to ensure it's within the specified range.
+
+The main function initializes the game board, displays the initial board, and manages the player turns. It alternates between player X and player O, checking for a winner or a tie after each move. 
