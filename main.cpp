@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 const int ROWS_AND_COLUMNS = 3;
 void DisplayGameBoard(const char[][ROWS_AND_COLUMNS]);
 void Player(char[][ROWS_AND_COLUMNS], const char);
