@@ -1,6 +1,15 @@
 # Tic-Tac-Toe Game
 
-This is a simple implementation of the classic Tic Tac Toe game written in C++. The game features a command-line interface and allows two players to take turns and play against each other. 
+## Overview
+This C++ Tic-Tac-Toe game implements a client-server architecture, allowing two players to engage in real-time gameplay. The server manages the game logic, while the client facilitates user interactions. The documentation covers both server-side and client-side components. 
+
+## Server-Side Application
+### GameManager Class  
+The Game Manager class orchestrates the Tic-Tac-Toe game's server-side functionality.  
+
+* **MakeMove Function:**
+  * Validates and processes a player's move
+  * Checks for move validity, updates the game board and determines the game status (win, tie, or ongoing).
 
 ## How to Play
 
