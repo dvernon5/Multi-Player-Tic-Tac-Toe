@@ -4,6 +4,21 @@
 This C++ Tic-Tac-Toe game implements a client-server architecture, allowing two players to engage in real-time gameplay. The server manages the game logic, while the client facilitates user interactions. The documentation covers both server-side and client-side components. 
 
 ## Server-Side Application
+### Game Class  
+The Game class represents the Tic-Tac-Toe game board and its rules.
+
+* #### Constructor (Game):
+  * Initializes a 3X3 game board.
+  * Represents the board as a 2D array of cells.
+* #### DisplayeGameBoard Function:
+  * Returns a string representation of the current game board.
+* #### IsMoveValid Function:
+  * Checks if a move at the specified row and column is valid.
+* #### InsertMove Function:
+  * Inserts the player's move into the game board.
+* #### IsWinner Function:
+  * Checks if the current move results in a win horizontally, vertically, or diagonally.
+
 ### GameManager Class  
 The Game Manager class orchestrates the Tic-Tac-Toe game's server-side functionality.  
 
