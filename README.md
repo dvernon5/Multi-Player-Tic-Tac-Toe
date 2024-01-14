@@ -1,55 +1,63 @@
 # Tic-Tac-Toe Game
 
 ## Overview
-This C++ Tic-Tac-Toe game implements a client-server architecture, allowing two players to engage in real-time gameplay. The server manages the game logic, while the client facilitates user interactions. The documentation covers both server-side and client-side components. 
+This C++ Tic-Tac-Toe project embodies a classic game with a modern twist, incorporating a server-client model to enable multiplayer gameplay. The game logic is split between the server and the client, creating a seamless interaction experience for players.
 
-## Server-Side Application
-### Game Class  
-The Game class represents the Tic-Tac-Toe game board and its rules.
-
-* #### Constructor (Game):
-  * Initializes a 3X3 game board.
-  * Represents the board as a 2D array of cells.
-* #### DisplayeGameBoard Function:
-  * Returns a string representation of the current game board.
-* #### IsMoveValid Function:
-  * Checks if a move at the specified row and column is valid.
-* #### InsertMove Function:
-  * Inserts the player's move into the game board.
-* #### IsWinner Function:
-  * Checks if the current move results in a win horizontally, vertically, or diagonally.
+## Server-Side Application  
+### GameServer Class  
+The **GameServer** class serves as the backbone of the server-side application. It handles incoming connections from clients, manages game instances, and ensures efficient communication between players. The server orchestrates the over-gaming experience, coordinating matches and maintaining a fair and secure environment.   
 
 ### GameManager Class  
-The Game Manager class orchestrates the Tic-Tac-Toe game's server-side functionality.  
+The **GameManager** class on the server side works in conjunction with the **GameServer**. It manages player turns, validates moves, and determines the game's outcome. The server acts as the central authority, ensuring fair play and enforcing game rules.   
 
-* #### MakeMove Function:
-  * Validates and processes a player's move
-  * Checks for move validity, updates the game board and determines the game status (win, tie, or ongoing).
+### Game Class  
+Working closely with the **GameManager** class, the **Game** class represents the core logic of the Tic-Tac-Toe game. It tracks the game board, evaluates winning conditions, and provides updates to players through the server. 
+
+### RequestManager Class
+The **RequestManager** class handles communication with clients, specifically managing user input validation. It interfaces with the client-side components to ensure valid moves from players, contributing to the smooth flow of the game. 
+
+## Client-Side Application
+### GameClient Class
+The **GameClient** class on the client side establishes a connection with the server, enabling players to participate in the Tic-Tac-Toe game. It manages user input, sends moves to the server, and receives updates on the game state.  
+
+### ResponseManager Class  
+Collaborating with the **Game Client**, the **ResponseManager** class validates user input on the client side. It ensures that only valid moves are sent to the server, maintaining the integrity of the game. 
+
+### nlohmann::json Library  
+The **nlohmann::json** library handles JSON serialization and deserialization within the application. 
 
 ## How to Play
-
-1. **Compilation**: To compile the code, use a C++ compiler such as g++. Open a terminal and navigate to the directory containing the source code file ('tic_tac_toe.cpp'). Use the following command to compile the code:
-
+1. **Server Setup:**
+   * **Compilation**: To compile the code, use a C++ compiler such as g++. Open a terminal and navigate to the 
+     directory containing the source code file ('TicTacToeServer.cpp'). Use the following command to compile the code:
 ```shell
-  g++ -O2 -std=c++11 main.cpp -o tic_tac_toe -Wall
+  g++ -O2 -std=c++11 *.cpp -o executionOutput -Wall
 ```
-2. **Running** the Game: After compilation, you can run the game using the following command:
-
+2. **Client Setup:**
+   * * **Compilation**: To compile the code, use a C++ compiler such as g++. Open a terminal and navigate to the 
+     directory containing the source code file ('TicTacClient.cpp'). Use the following command to compile the code:
 ```shell
-  ./tic_tac_toe
+  g++ -O2 -std=c++11 *.cpp -o executionOutput -Wall
 ```
-3. **Game Rules**: The game is played on a 3 x 3 grid. Players take turns placing their markers on the grid. The goal is to get three of their markers in a row, either horizontally, vertically, or diagonally, before the opponent does.
-4. **Player input**: Players are prompted to enter the row and column numbers where they want to place their marker. Input is validated to ensure it's within valid range (1 to 3) and the chosen spot is not already occupied.
-5. **Winning and Tying**: The game continues until a player wins or the board is completely filled (a tie). The game will display the winner's name or "TIE" if there's no winner.
+3. **Running the Game: After compilation for both Server and Client, you can run the game using the following command (Make sure you run the server application first. Then run the client application):
+```shell
+  ./executionOutput
+```
+4. **Gameplay:**
+   * Players take turns making moves by entering row and column numbers.
+   * Server and client communicate to update the game board in real-time.
 
-## Code Structure
+5. **Gameover:**
+   * The game concludes when a player wins, the game ties, or an error occurs with the GameServer or GameClient connection.
 
-The code is structured as follows:
+## Key Features 
+* C++ Compiler supporting C++11 or later.
+* Server-Client Architecture: Enables multiplayer functionality through a server-client model.
+* Real-time Gameplay: Supports dynamic and real-time Tic-Tac-Toe gameplay between connected clients.
+* User Input Validation: Ensures that only valid moves are accepted, preventing unfair play.
+* JSON Data Handling: Utilizes the **nlohmann::json** library for efficient and structured handling of JSON data in communication between server and client. 
 
-* displayGameBoard: Display the current state of the game board.
-* player: Handles the input from players and places their markers on the board.
-* checkIfWinnerLeftToRightDiagonal: These functions check if there's a winner based on rows, columns, and diagonals.
-* checkIfWinner: Calls the above functions to determine if there's a winner or a tie.
-* inputValidate: Validates user input to ensure it's within the specified range.
-
-The main function initializes the game board, displays the initial board, and manages the player turns. It alternates between player X and player O, checking for a winner or a tie after each move. 
+## Acknowledgments
+* For more information about nlohmann json please check out the documentation. (https://github.com/nlohmann/json)
+* This Tic-Tac-Toe game is a simple demonstration of client-server communication and real-time gameplay.
+* Explore and modify the code for learning and experimentation purposes. 
