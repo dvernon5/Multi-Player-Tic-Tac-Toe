@@ -7,7 +7,7 @@ This is a simple implementation of the classic Tic Tac Toe game written in C++. 
 1. **Compilation**: To compile the code, use a C++ compiler such as g++. Open a terminal and navigate to the directory containing the source code file ('tic_tac_toe.cpp'). Use the following command to compile the code:
 
 ```shell
-  g++ -o tic_tac_toe tic_tac_toe.cpp
+  g++ -O2 -std=c++11 main.cpp -o tic_tac_toe -Wall
 ```
 2. **Running** the Game: After compilation, you can run the game using the following command:
 
