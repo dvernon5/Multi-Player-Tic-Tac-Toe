@@ -29,13 +29,13 @@ The **nlohmann::json** library handles JSON serialization and deserialization wi
 ## How to Play
 1. **Server Setup:**
    * **Compilation**: To compile the code, use a C++ compiler such as g++. Open a terminal and navigate to the 
-     directory containing the source code file ('TicTacToeServer.cpp'). Use the following command to compile the code:
+     directory containing the source code file ('Tic-Tac-Toe-Server.cpp'). Use the following command to compile the code:
 ```shell
   g++ -O2 -std=c++11 *.cpp -o executionOutput -Wall
 ```
 2. **Client Setup:**
    * * **Compilation**: To compile the code, use a C++ compiler such as g++. Open a terminal and navigate to the 
-     directory containing the source code file ('TicTacClient.cpp'). Use the following command to compile the code:
+     directory containing the source code file ('Tic-Tac-Toe-Client.cpp'). Use the following command to compile the code:
 ```shell
   g++ -O2 -std=c++11 *.cpp -o executionOutput -Wall
 ```
