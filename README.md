@@ -7,7 +7,7 @@ This C++ Tic-Tac-Toe game implements a client-server architecture, allowing two 
 ### GameManager Class  
 The Game Manager class orchestrates the Tic-Tac-Toe game's server-side functionality.  
 
-* **MakeMove Function:**
+* #### MakeMove Function:
   * Validates and processes a player's move
   * Checks for move validity, updates the game board and determines the game status (win, tie, or ongoing).
 
