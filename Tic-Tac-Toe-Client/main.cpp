@@ -5,5 +5,5 @@ int main(int argc, const char * argv[]) {
   game_client.StartConnection();
   game_client.LaunchGame();
   
-  EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
